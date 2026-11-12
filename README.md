@@ -17,7 +17,6 @@ both setups, the scorer and the raw logs of the run we published, so you can che
 | Median steps (tool calls) | 3 | 3 |
 | Median tokens per task | 87,136 | 71,150 |
 | Median time per task | 22.7 s | 23.3 s |
-| API cost reported by Claude Code | US$3.84 | US$2.09 |
 
 Check it from the raw logs in this kit, with no browser and no account:
 
@@ -25,7 +24,7 @@ Check it from the raw logs in this kit, with no browser and no account:
 node score.mjs results/2026-11-02
 ```
 
-It re-scores every run record in `results/2026-11-02/runs/` and prints the table above, plus a per-site table.
+It re-scores every run record in `results/2026-11-02/runs/` and prints the score table and a per-site table.
 
 ## Run it yourself (one command)
 
@@ -52,8 +51,8 @@ A stopped run resumes where it stopped: run the same command again. Every option
   used about US$6 of API usage in our run (both setups).
 - **Browz** ([download](https://gobrowz.com/download)), free plan is enough. Pass the app (`Browz.app` on macOS),
   the install folder on Windows, or the extracted AppImage on Linux. The kit starts Browz's own `browz-agent` and
-  `browz-mcp` from it with a **new, empty data folder** (`BROWZ_KEYSTORE=off`, a random port), so your own profiles are
-  never read or changed. On macOS the engine is inside the app. On Windows and Linux the installer carries the engine
+  `browz-mcp` from it with a **new, empty data folder** (`BROWZ_KEYSTORE=off`, a random port), so your own profiles stay
+  untouched. On macOS the engine is inside the app. On Windows and Linux the installer carries the engine
   as a signed package that Browz unpacks on its first start, so start Browz once and pass `--engine <path to the
   unpacked engine>` if the runner cannot find it. We have run the kit on macOS.
 - **Google Chrome**, for the plain browser setup.
@@ -83,24 +82,12 @@ A stopped run resumes where it stopped: run the same command again. Every option
 - **Recorded per task:** `runs/<setup>/<task>.json`: every tool call with its input and the first 4,000 characters of
   its result, the agent's final text, turns, tokens, cost and wall time, and the score.
 
-## Cost
-
-The cost is what Claude Code reports for each run (`total_cost_usd`), summed per setup. In our run:
-
-| | Browz MCP | Plain browser MCP |
-|---|---:|---:|
-| Total tokens | 6,817,342 | 4,303,690 |
-| Median tokens per task | 87,136 | 71,150 |
-| API cost | US$3.84 | US$2.09 |
-
-Your cost depends on the model, its prices on the day and the pages the agent reads.
-
-## Variance and limits
+## Variance
 
 **One run, one network, one day.** Our numbers are one run of each setup, on one Mac on a residential connection in
 Australia, on 2 Nov 2026. Sites change, and bot protection varies with the IP address, its reputation, the time of day
-and the site's own settings, so your run will differ. We have not measured run-to-run variance; treat any single run,
-ours included, as a measurement of that run, not a guarantee.
+and the site's own settings, so your run will differ. Treat any single run, ours included, as a measurement of that
+run.
 
 What moved the result in our run, and is most likely to move in yours:
 
