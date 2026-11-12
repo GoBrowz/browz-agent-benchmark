@@ -1,0 +1,16 @@
+{
+  "name": "browz-agent-benchmark",
+  "version": "1.0.0",
+  "description": "The same Claude agent does 50 public web tasks through the Browz MCP server and through a plain browser MCP; scored from its answers.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "bench": "node bench.mjs",
+    "score": "node score.mjs",
+    "score:published": "node score.mjs results/2026-11-02",
+    "redact": "node redact.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

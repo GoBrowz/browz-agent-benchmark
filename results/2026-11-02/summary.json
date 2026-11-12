@@ -1,0 +1,1240 @@
+{
+ "meta": {
+  "benchmark": "browz-agent-benchmark",
+  "startedAt": "2026-11-02T08:57:50.682Z",
+  "setups": [
+   "browz",
+   "playwright"
+  ],
+  "tasks": [
+   "wiki-everest",
+   "wiki-eiffel",
+   "wiki-tungsten",
+   "wiki-pride",
+   "wiki-boiling",
+   "arxiv-attention",
+   "arxiv-resnet",
+   "arxiv-authors",
+   "arxiv-bert-year",
+   "gh-vscode-license",
+   "gh-linux-branch",
+   "gh-ripgrep-owner",
+   "gh-rust-language",
+   "mdn-teapot",
+   "mdn-position",
+   "mdn-hr",
+   "py-match",
+   "py-namedtuple",
+   "py-len",
+   "npm-express",
+   "npm-lodash-repo",
+   "cam-serendipity",
+   "cam-ubiquitous",
+   "cam-cactus",
+   "coursera-ml",
+   "coursera-learning",
+   "hf-bert-license",
+   "hf-llama-org",
+   "rust-mut",
+   "node-fs",
+   "bbc-headline",
+   "ddg-founder",
+   "google-light",
+   "google-sydney-tz",
+   "bing-tokyo",
+   "amazon-kindle",
+   "amazon-book",
+   "booking-paris",
+   "imdb-shawshank",
+   "so-sorted",
+   "reddit-askhist",
+   "zillow-austin",
+   "etsy-mug",
+   "walmart-airfryer",
+   "bestbuy-airpods",
+   "nike-af1",
+   "indeed-jobs",
+   "allrecipes-cookies",
+   "espn-nba-2016",
+   "apple-air-chip"
+  ],
+  "model": "sonnet",
+  "maxTurns": 30,
+  "timeoutSeconds": 300,
+  "playwrightMcp": "@playwright/mcp@0.0.84",
+  "playwrightBrowser": "chrome",
+  "browzMcp": "browz-mcp binary",
+  "headless": true,
+  "claudeVersion": "2.1.316 (Claude Code)",
+  "disallowedTools": [
+   "Bash",
+   "BashOutput",
+   "KillShell",
+   "WebFetch",
+   "WebSearch",
+   "Task",
+   "Agent",
+   "Read",
+   "Write",
+   "Edit",
+   "MultiEdit",
+   "NotebookEdit",
+   "Glob",
+   "Grep",
+   "TodoWrite",
+   "Skill",
+   "SlashCommand"
+  ],
+  "playwrightMcpVersion": "Version 0.0.84",
+  "endedAt": "2026-11-02T09:29:11.343Z",
+  "laneErrors": [],
+  "host": {
+   "platform": "darwin",
+   "release": "25.6.0"
+  }
+ },
+ "summary": {
+  "taskCount": 50,
+  "missing": [],
+  "setups": {
+   "browz": {
+    "all": {
+     "tasks": 50,
+     "succeeded": 46,
+     "successRate": 92,
+     "blocked": 3,
+     "blockRate": 6,
+     "medianSteps": 3,
+     "medianTokens": 87136,
+     "medianOutputTokens": 465,
+     "medianSeconds": 22.6605,
+     "totalTokens": 6817342,
+     "costUsd": 3.84
+    },
+    "groups": {
+     "open": {
+      "tasks": 32,
+      "succeeded": 32,
+      "successRate": 100,
+      "blocked": 0,
+      "blockRate": 0,
+      "medianSteps": 3,
+      "medianTokens": 80059.5,
+      "medianOutputTokens": 435,
+      "medianSeconds": 21.554499999999997,
+      "totalTokens": 3036194,
+      "costUsd": 1.92
+     },
+     "protected": {
+      "tasks": 18,
+      "succeeded": 14,
+      "successRate": 77.8,
+      "blocked": 3,
+      "blockRate": 16.7,
+      "medianSteps": 5,
+      "medianTokens": 107972,
+      "medianOutputTokens": 584.5,
+      "medianSeconds": 26.124,
+      "totalTokens": 3781148,
+      "costUsd": 1.92
+     }
+    }
+   },
+   "playwright": {
+    "all": {
+     "tasks": 50,
+     "succeeded": 38,
+     "successRate": 76,
+     "blocked": 12,
+     "blockRate": 24,
+     "medianSteps": 3,
+     "medianTokens": 71149.5,
+     "medianOutputTokens": 386.5,
+     "medianSeconds": 23.298000000000002,
+     "totalTokens": 4303690,
+     "costUsd": 2.09
+    },
+    "groups": {
+     "open": {
+      "tasks": 32,
+      "succeeded": 29,
+      "successRate": 90.6,
+      "blocked": 3,
+      "blockRate": 9.4,
+      "medianSteps": 3,
+      "medianTokens": 70672,
+      "medianOutputTokens": 380.5,
+      "medianSeconds": 22.578000000000003,
+      "totalTokens": 2427032,
+      "costUsd": 1.28
+     },
+     "protected": {
+      "tasks": 18,
+      "succeeded": 9,
+      "successRate": 50,
+      "blocked": 9,
+      "blockRate": 50,
+      "medianSteps": 3,
+      "medianTokens": 74093.5,
+      "medianOutputTokens": 432.5,
+      "medianSeconds": 23.771,
+      "totalTokens": 1876658,
+      "costUsd": 0.81
+     }
+    }
+   }
+  },
+  "tasks": [
+   {
+    "id": "wiki-everest",
+    "group": "open",
+    "site": "Wikipedia",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 67949,
+      "seconds": 15.7
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 65969,
+      "seconds": 23.7
+     }
+    }
+   },
+   {
+    "id": "wiki-eiffel",
+    "group": "open",
+    "site": "Wikipedia",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 145711,
+      "seconds": 28.2
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 51510,
+      "seconds": 18.4
+     }
+    }
+   },
+   {
+    "id": "wiki-tungsten",
+    "group": "open",
+    "site": "Wikipedia",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 6,
+      "tokens": 127747,
+      "seconds": 23.1
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 50669,
+      "seconds": 20.5
+     }
+    }
+   },
+   {
+    "id": "wiki-pride",
+    "group": "open",
+    "site": "Wikipedia",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 16,
+      "tokens": 214919,
+      "seconds": 31.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 8,
+      "tokens": 165052,
+      "seconds": 30.2
+     }
+    }
+   },
+   {
+    "id": "wiki-boiling",
+    "group": "open",
+    "site": "Wikipedia",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 67942,
+      "seconds": 16.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 52594,
+      "seconds": 23.6
+     }
+    }
+   },
+   {
+    "id": "arxiv-attention",
+    "group": "open",
+    "site": "arXiv",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 73764,
+      "seconds": 31.3
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 2,
+      "tokens": 48230,
+      "seconds": 15
+     }
+    }
+   },
+   {
+    "id": "arxiv-resnet",
+    "group": "open",
+    "site": "arXiv",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 72596,
+      "seconds": 12.2
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 71067,
+      "seconds": 20.6
+     }
+    }
+   },
+   {
+    "id": "arxiv-authors",
+    "group": "open",
+    "site": "arXiv",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 57008,
+      "seconds": 9.7
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 48747,
+      "seconds": 18
+     }
+    }
+   },
+   {
+    "id": "arxiv-bert-year",
+    "group": "open",
+    "site": "arXiv",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 72205,
+      "seconds": 16.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 70277,
+      "seconds": 16.7
+     }
+    }
+   },
+   {
+    "id": "gh-vscode-license",
+    "group": "open",
+    "site": "GitHub",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 6,
+      "tokens": 123415,
+      "seconds": 20.5
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 50960,
+      "seconds": 23.1
+     }
+    }
+   },
+   {
+    "id": "gh-linux-branch",
+    "group": "open",
+    "site": "GitHub",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 59921,
+      "seconds": 18.8
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 101763,
+      "seconds": 25.5
+     }
+    }
+   },
+   {
+    "id": "gh-ripgrep-owner",
+    "group": "open",
+    "site": "GitHub",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 78226,
+      "seconds": 31.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 78566,
+      "seconds": 24.7
+     }
+    }
+   },
+   {
+    "id": "gh-rust-language",
+    "group": "open",
+    "site": "GitHub",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 91039,
+      "seconds": 24.3
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 89301,
+      "seconds": 19.2
+     }
+    }
+   },
+   {
+    "id": "mdn-teapot",
+    "group": "open",
+    "site": "MDN",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 143497,
+      "seconds": 40.3
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 49959,
+      "seconds": 19.2
+     }
+    }
+   },
+   {
+    "id": "mdn-position",
+    "group": "open",
+    "site": "MDN",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 6,
+      "tokens": 123412,
+      "seconds": 49.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 49658,
+      "seconds": 27.1
+     }
+    }
+   },
+   {
+    "id": "mdn-hr",
+    "group": "open",
+    "site": "MDN",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 146016,
+      "seconds": 19.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 2,
+      "tokens": 48475,
+      "seconds": 16.7
+     }
+    }
+   },
+   {
+    "id": "py-match",
+    "group": "open",
+    "site": "Python docs",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 109239,
+      "seconds": 37.7
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 68494,
+      "seconds": 22.1
+     }
+    }
+   },
+   {
+    "id": "py-namedtuple",
+    "group": "open",
+    "site": "Python docs",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 81939,
+      "seconds": 17.1
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 76707,
+      "seconds": 16.6
+     }
+    }
+   },
+   {
+    "id": "py-len",
+    "group": "open",
+    "site": "Python docs",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 6,
+      "tokens": 123431,
+      "seconds": 30.7
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 48980,
+      "seconds": 17.1
+     }
+    }
+   },
+   {
+    "id": "npm-express",
+    "group": "open",
+    "site": "npm",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 6,
+      "tokens": 119255,
+      "seconds": 28
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 4,
+      "tokens": 82622,
+      "seconds": 36.6
+     }
+    }
+   },
+   {
+    "id": "npm-lodash-repo",
+    "group": "open",
+    "site": "npm",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 72948,
+      "seconds": 20.3
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 66828,
+      "seconds": 17.4
+     }
+    }
+   },
+   {
+    "id": "cam-serendipity",
+    "group": "open",
+    "site": "Cambridge Dictionary",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 78104,
+      "seconds": 41.3
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 66726,
+      "seconds": 29.4
+     }
+    }
+   },
+   {
+    "id": "cam-ubiquitous",
+    "group": "open",
+    "site": "Cambridge Dictionary",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 80025,
+      "seconds": 19.1
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 4,
+      "tokens": 82357,
+      "seconds": 32
+     }
+    }
+   },
+   {
+    "id": "cam-cactus",
+    "group": "open",
+    "site": "Cambridge Dictionary",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 80094,
+      "seconds": 48.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 50080,
+      "seconds": 17.2
+     }
+    }
+   },
+   {
+    "id": "coursera-ml",
+    "group": "open",
+    "site": "Coursera",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 112567,
+      "seconds": 18.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 88640,
+      "seconds": 36.2
+     }
+    }
+   },
+   {
+    "id": "coursera-learning",
+    "group": "open",
+    "site": "Coursera",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 74916,
+      "seconds": 20.9
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 80542,
+      "seconds": 17.4
+     }
+    }
+   },
+   {
+    "id": "hf-bert-license",
+    "group": "open",
+    "site": "Hugging Face",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 65374,
+      "seconds": 18.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 79115,
+      "seconds": 13.5
+     }
+    }
+   },
+   {
+    "id": "hf-llama-org",
+    "group": "open",
+    "site": "Hugging Face",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 78175,
+      "seconds": 34.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 85045,
+      "seconds": 24.9
+     }
+    }
+   },
+   {
+    "id": "rust-mut",
+    "group": "open",
+    "site": "Rust book",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 74368,
+      "seconds": 13.9
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 125285,
+      "seconds": 34.3
+     }
+    }
+   },
+   {
+    "id": "node-fs",
+    "group": "open",
+    "site": "Node.js docs",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 56824,
+      "seconds": 14
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 4,
+      "tokens": 82090,
+      "seconds": 24.6
+     }
+    }
+   },
+   {
+    "id": "bbc-headline",
+    "group": "open",
+    "site": "BBC News",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 82314,
+      "seconds": 22.2
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 4,
+      "tokens": 101226,
+      "seconds": 208.5
+     }
+    }
+   },
+   {
+    "id": "ddg-founder",
+    "group": "open",
+    "site": "DuckDuckGo",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 81254,
+      "seconds": 30.8
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 5,
+      "tokens": 149498,
+      "seconds": 63.4
+     }
+    }
+   },
+   {
+    "id": "google-light",
+    "group": "protected",
+    "site": "Google Search",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 93515,
+      "seconds": 59.8
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 2,
+      "tokens": 49541,
+      "seconds": 19.1
+     }
+    }
+   },
+   {
+    "id": "google-sydney-tz",
+    "group": "protected",
+    "site": "Google Search",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 84018,
+      "seconds": 12.6
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 67631,
+      "seconds": 23.5
+     }
+    }
+   },
+   {
+    "id": "bing-tokyo",
+    "group": "protected",
+    "site": "Bing",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 87810,
+      "seconds": 16.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 76955,
+      "seconds": 24
+     }
+    }
+   },
+   {
+    "id": "amazon-kindle",
+    "group": "protected",
+    "site": "Amazon",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 109558,
+      "seconds": 14.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 71232,
+      "seconds": 33.7
+     }
+    }
+   },
+   {
+    "id": "amazon-book",
+    "group": "protected",
+    "site": "Amazon",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 8,
+      "tokens": 154594,
+      "seconds": 39.7
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 8,
+      "tokens": 172920,
+      "seconds": 53.7
+     }
+    }
+   },
+   {
+    "id": "booking-paris",
+    "group": "protected",
+    "site": "Booking.com",
+    "bySetup": {
+     "browz": {
+      "success": false,
+      "blocked": false,
+      "steps": 39,
+      "tokens": 1421901,
+      "seconds": 198.6
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 10,
+      "tokens": 222232,
+      "seconds": 53.1
+     }
+    }
+   },
+   {
+    "id": "imdb-shawshank",
+    "group": "protected",
+    "site": "IMDb",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 125636,
+      "seconds": 34.5
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 49932,
+      "seconds": 15.1
+     }
+    }
+   },
+   {
+    "id": "so-sorted",
+    "group": "protected",
+    "site": "Stack Overflow",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 67251,
+      "seconds": 25.1
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 5,
+      "tokens": 101050,
+      "seconds": 38.2
+     }
+    }
+   },
+   {
+    "id": "reddit-askhist",
+    "group": "protected",
+    "site": "Reddit",
+    "bySetup": {
+     "browz": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 67524,
+      "seconds": 19.5
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 65400,
+      "seconds": 22.8
+     }
+    }
+   },
+   {
+    "id": "zillow-austin",
+    "group": "protected",
+    "site": "Zillow",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 90536,
+      "seconds": 15
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 2,
+      "tokens": 48324,
+      "seconds": 19.1
+     }
+    }
+   },
+   {
+    "id": "etsy-mug",
+    "group": "protected",
+    "site": "Etsy",
+    "bySetup": {
+     "browz": {
+      "success": false,
+      "blocked": true,
+      "steps": 5,
+      "tokens": 106386,
+      "seconds": 17.2
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 67273,
+      "seconds": 11.9
+     }
+    }
+   },
+   {
+    "id": "walmart-airfryer",
+    "group": "protected",
+    "site": "Walmart",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 155003,
+      "seconds": 27.2
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 14,
+      "tokens": 237748,
+      "seconds": 74
+     }
+    }
+   },
+   {
+    "id": "bestbuy-airpods",
+    "group": "protected",
+    "site": "Best Buy",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 23,
+      "tokens": 443369,
+      "seconds": 44.4
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 10,
+      "tokens": 188915,
+      "seconds": 114.4
+     }
+    }
+   },
+   {
+    "id": "nike-af1",
+    "group": "protected",
+    "site": "Nike",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 86462,
+      "seconds": 33.8
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 4,
+      "tokens": 104953,
+      "seconds": 38.9
+     }
+    }
+   },
+   {
+    "id": "indeed-jobs",
+    "group": "protected",
+    "site": "Indeed",
+    "bySetup": {
+     "browz": {
+      "success": false,
+      "blocked": true,
+      "steps": 5,
+      "tokens": 110119,
+      "seconds": 34.1
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 3,
+      "tokens": 67815,
+      "seconds": 22.9
+     }
+    }
+   },
+   {
+    "id": "allrecipes-cookies",
+    "group": "protected",
+    "site": "Allrecipes",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 79381,
+      "seconds": 21
+     },
+     "playwright": {
+      "success": false,
+      "blocked": true,
+      "steps": 4,
+      "tokens": 82693,
+      "seconds": 21.3
+     }
+    }
+   },
+   {
+    "id": "espn-nba-2016",
+    "group": "protected",
+    "site": "ESPN",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 13,
+      "tokens": 372121,
+      "seconds": 37.5
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 9,
+      "tokens": 151178,
+      "seconds": 29.2
+     }
+    }
+   },
+   {
+    "id": "apple-air-chip",
+    "group": "protected",
+    "site": "Apple",
+    "bySetup": {
+     "browz": {
+      "success": true,
+      "blocked": false,
+      "steps": 7,
+      "tokens": 125964,
+      "seconds": 18.9
+     },
+     "playwright": {
+      "success": true,
+      "blocked": false,
+      "steps": 3,
+      "tokens": 50866,
+      "seconds": 19.5
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,97 @@
+name: Benchmark result
+description: Submit a run of the benchmark: your numbers, your setup and your run folder.
+title: "Result: <date>, <OS>, <model>"
+labels: ["result"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for running the benchmark. We list every submitted result that comes with its run folder, whatever it shows.
+        Before you attach anything, run `node redact.mjs <run dir> --check` (or without `--check` to redact in place) and read what is left.
+  - type: input
+    id: who
+    attributes:
+      label: Who ran it
+      description: Your name or organisation, and whether we may name you when we list the result (or "anonymous").
+    validations:
+      required: true
+  - type: dropdown
+    id: independent
+    attributes:
+      label: Relationship to Browz
+      options:
+        - Independent (no relationship with Covenant Alpha / Browz)
+        - Browz customer or affiliate
+        - Received something from Browz for this run (say what below)
+        - Browz team
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date of the run (UTC)
+      placeholder: "2026-12-01"
+    validations:
+      required: true
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      description: Region (country or continent) and kind of connection (home, office, university, data centre, VPN or proxy). No IP address.
+      placeholder: "Germany, home fibre, no proxy"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 26.1 (Apple silicon)"
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Browz version (`browz-agent --version`), plain browser MCP package and browser, Claude Code version, Node version, and this kit's commit.
+      placeholder: "Browz 0.1.9; @playwright/mcp@0.0.84 with Chrome 156; Claude Code 2.1.316; Node 24.1; kit abc1234"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and settings
+      description: As passed to bench.mjs. The published run used sonnet, 30 turns, 300 s, headless.
+      placeholder: "sonnet, --max-turns 30, --timeout 300, headless"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Result
+      description: Paste the table `node score.mjs <run dir>` prints.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: deviations
+    attributes:
+      label: Changes to the method
+      description: Tasks added, removed or edited, other settings, reruns of single tasks, anything that differs from the README. "None" if nothing.
+    validations:
+      required: true
+  - type: textarea
+    id: run
+    attributes:
+      label: Run folder
+      description: Attach the run folder as a .zip (meta.json, summary.json, scores.json, runs/), or link to where it is. Results without the folder can't be checked, so we list them separately.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I ran `node redact.mjs <run dir> --check` and it reports the folder clean, or I removed what it found.
+          required: true
+        - label: I did not sign in, sign up, buy or submit anything on the sites beyond what the tasks ask.
+          required: true
