@@ -15,7 +15,6 @@ both setups, the scorer and the raw logs of the run we published, so you can che
 | …on bot-protected sites | 14/18 | 9/18 |
 | Runs blocked or challenged out | 3 (6%) | 12 (24%) |
 | Median steps (tool calls) | 3 | 3 |
-| Median tokens per task | 87,136 | 71,150 |
 | Median time per task | 22.7 s | 23.3 s |
 
 Check it from the raw logs in this kit, with no browser and no account:
